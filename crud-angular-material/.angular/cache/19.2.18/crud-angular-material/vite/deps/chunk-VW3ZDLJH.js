@@ -2,7 +2,7 @@ import {
   DOCUMENT,
   getDOM,
   isPlatformServer
-} from "./chunk-GKIE6DTT.js";
+} from "./chunk-AYVJ7RXS.js";
 import {
   APP_ID,
   CSP_NONCE,
@@ -21,7 +21,7 @@ import {
   setClassMetadata,
   ɵɵdefineInjectable,
   ɵɵinject
-} from "./chunk-XP4P5ATS.js";
+} from "./chunk-G3RBU73A.js";
 
 // node_modules/@angular/platform-browser/fesm2022/dom_renderer-DGKzginR.mjs
 var EVENT_MANAGER_PLUGINS = new InjectionToken(ngDevMode ? "EventManagerPlugins" : "");
@@ -750,4 +750,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-V43UGFXW.js.map
+//# sourceMappingURL=chunk-VW3ZDLJH.js.map

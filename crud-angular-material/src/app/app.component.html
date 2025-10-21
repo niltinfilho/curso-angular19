@@ -1,7 +1,13 @@
 <mat-toolbar color="primary">
   <span>Cadastro de Clientes</span>
   <span class="spacer"></span>
-  <a href="">Formulário de cadastro</a>
-  <a href="">Consulta de pessoas</a>
+  <a routerLink="/cadastro">
+    <mat-icon fontIcon="feed"></mat-icon>
+    Formulário de cadastro
+  </a>
+  <a routerLink="/consulta">
+    <mat-icon fontIcon="search"></mat-icon>
+    Consulta de pessoas
+  </a>
 </mat-toolbar>
 <router-outlet></router-outlet>
