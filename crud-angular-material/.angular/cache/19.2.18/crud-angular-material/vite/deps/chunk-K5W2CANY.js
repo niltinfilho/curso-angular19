@@ -1,14 +1,26 @@
 import {
-  BidiModule
-} from "./chunk-7ZAXCUZP.js";
+  Platform,
+  _CdkPrivateStyleLoader,
+  _VisuallyHiddenLoader,
+  _getEventTarget,
+  _getFocusedElementPierceShadowDom,
+  _getShadowRoot,
+  normalizePassiveListenerOptions
+} from "./chunk-VBNCXKMB.js";
 import {
-  DOCUMENT,
-  isPlatformBrowser
-} from "./chunk-AYVJ7RXS.js";
+  coerceArray,
+  coerceElement,
+  coerceNumberProperty
+} from "./chunk-4ZYS3GPN.js";
+import {
+  BidiModule
+} from "./chunk-7AQ3RK2W.js";
+import {
+  DOCUMENT
+} from "./chunk-256YEQI2.js";
 import {
   ANIMATION_MODULE_TYPE,
   APP_ID,
-  ApplicationRef,
   BehaviorSubject,
   CSP_NONCE,
   ChangeDetectionStrategy,
@@ -16,7 +28,6 @@ import {
   Component,
   Directive,
   ElementRef,
-  EnvironmentInjector,
   EventEmitter,
   Injectable,
   InjectionToken,
@@ -27,7 +38,6 @@ import {
   NgZone,
   Observable,
   Output,
-  PLATFORM_ID,
   QueryList,
   Subject,
   Subscription,
@@ -40,7 +50,6 @@ import {
   booleanAttribute,
   combineLatest,
   concat,
-  createComponent,
   debounceTime,
   distinctUntilChanged,
   filter,
@@ -81,259 +90,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-G3RBU73A.js";
-
-// node_modules/@angular/cdk/fesm2022/platform.mjs
-var hasV8BreakIterator;
-try {
-  hasV8BreakIterator = typeof Intl !== "undefined" && Intl.v8BreakIterator;
-} catch {
-  hasV8BreakIterator = false;
-}
-var Platform = class _Platform {
-  _platformId = inject(PLATFORM_ID);
-  // We want to use the Angular platform check because if the Document is shimmed
-  // without the navigator, the following checks will fail. This is preferred because
-  // sometimes the Document may be shimmed without the user's knowledge or intention
-  /** Whether the Angular application is being rendered in the browser. */
-  isBrowser = this._platformId ? isPlatformBrowser(this._platformId) : typeof document === "object" && !!document;
-  /** Whether the current browser is Microsoft Edge. */
-  EDGE = this.isBrowser && /(edge)/i.test(navigator.userAgent);
-  /** Whether the current rendering engine is Microsoft Trident. */
-  TRIDENT = this.isBrowser && /(msie|trident)/i.test(navigator.userAgent);
-  // EdgeHTML and Trident mock Blink specific things and need to be excluded from this check.
-  /** Whether the current rendering engine is Blink. */
-  BLINK = this.isBrowser && !!(window.chrome || hasV8BreakIterator) && typeof CSS !== "undefined" && !this.EDGE && !this.TRIDENT;
-  // Webkit is part of the userAgent in EdgeHTML, Blink and Trident. Therefore we need to
-  // ensure that Webkit runs standalone and is not used as another engine's base.
-  /** Whether the current rendering engine is WebKit. */
-  WEBKIT = this.isBrowser && /AppleWebKit/i.test(navigator.userAgent) && !this.BLINK && !this.EDGE && !this.TRIDENT;
-  /** Whether the current platform is Apple iOS. */
-  IOS = this.isBrowser && /iPad|iPhone|iPod/.test(navigator.userAgent) && !("MSStream" in window);
-  // It's difficult to detect the plain Gecko engine, because most of the browsers identify
-  // them self as Gecko-like browsers and modify the userAgent's according to that.
-  // Since we only cover one explicit Firefox case, we can simply check for Firefox
-  // instead of having an unstable check for Gecko.
-  /** Whether the current browser is Firefox. */
-  FIREFOX = this.isBrowser && /(firefox|minefield)/i.test(navigator.userAgent);
-  /** Whether the current platform is Android. */
-  // Trident on mobile adds the android platform to the userAgent to trick detections.
-  ANDROID = this.isBrowser && /android/i.test(navigator.userAgent) && !this.TRIDENT;
-  // Safari browsers will include the Safari keyword in their userAgent. Some browsers may fake
-  // this and just place the Safari keyword in the userAgent. To be more safe about Safari every
-  // Safari browser should also use Webkit as its layout engine.
-  /** Whether the current browser is Safari. */
-  SAFARI = this.isBrowser && /safari/i.test(navigator.userAgent) && this.WEBKIT;
-  constructor() {
-  }
-  static ɵfac = function Platform_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _Platform)();
-  };
-  static ɵprov = ɵɵdefineInjectable({
-    token: _Platform,
-    factory: _Platform.ɵfac,
-    providedIn: "root"
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Platform, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], () => [], null);
-})();
-var PlatformModule = class _PlatformModule {
-  static ɵfac = function PlatformModule_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _PlatformModule)();
-  };
-  static ɵmod = ɵɵdefineNgModule({
-    type: _PlatformModule
-  });
-  static ɵinj = ɵɵdefineInjector({});
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PlatformModule, [{
-    type: NgModule,
-    args: [{}]
-  }], null, null);
-})();
-var supportsPassiveEvents;
-function supportsPassiveEventListeners() {
-  if (supportsPassiveEvents == null && typeof window !== "undefined") {
-    try {
-      window.addEventListener("test", null, Object.defineProperty({}, "passive", {
-        get: () => supportsPassiveEvents = true
-      }));
-    } finally {
-      supportsPassiveEvents = supportsPassiveEvents || false;
-    }
-  }
-  return supportsPassiveEvents;
-}
-function normalizePassiveListenerOptions(options) {
-  return supportsPassiveEventListeners() ? options : !!options.capture;
-}
-var RtlScrollAxisType;
-(function(RtlScrollAxisType2) {
-  RtlScrollAxisType2[RtlScrollAxisType2["NORMAL"] = 0] = "NORMAL";
-  RtlScrollAxisType2[RtlScrollAxisType2["NEGATED"] = 1] = "NEGATED";
-  RtlScrollAxisType2[RtlScrollAxisType2["INVERTED"] = 2] = "INVERTED";
-})(RtlScrollAxisType || (RtlScrollAxisType = {}));
-var shadowDomIsSupported;
-function _supportsShadowDom() {
-  if (shadowDomIsSupported == null) {
-    const head = typeof document !== "undefined" ? document.head : null;
-    shadowDomIsSupported = !!(head && (head.createShadowRoot || head.attachShadow));
-  }
-  return shadowDomIsSupported;
-}
-function _getShadowRoot(element) {
-  if (_supportsShadowDom()) {
-    const rootNode = element.getRootNode ? element.getRootNode() : null;
-    if (typeof ShadowRoot !== "undefined" && ShadowRoot && rootNode instanceof ShadowRoot) {
-      return rootNode;
-    }
-  }
-  return null;
-}
-function _getFocusedElementPierceShadowDom() {
-  let activeElement = typeof document !== "undefined" && document ? document.activeElement : null;
-  while (activeElement && activeElement.shadowRoot) {
-    const newActiveElement = activeElement.shadowRoot.activeElement;
-    if (newActiveElement === activeElement) {
-      break;
-    } else {
-      activeElement = newActiveElement;
-    }
-  }
-  return activeElement;
-}
-function _getEventTarget(event) {
-  return event.composedPath ? event.composedPath()[0] : event.target;
-}
-
-// node_modules/@angular/cdk/fesm2022/private.mjs
-var appsWithLoaders = /* @__PURE__ */ new WeakMap();
-var _CdkPrivateStyleLoader = class __CdkPrivateStyleLoader {
-  _appRef;
-  _injector = inject(Injector);
-  _environmentInjector = inject(EnvironmentInjector);
-  /**
-   * Loads a set of styles.
-   * @param loader Component which will be instantiated to load the styles.
-   */
-  load(loader) {
-    const appRef = this._appRef = this._appRef || this._injector.get(ApplicationRef);
-    let data = appsWithLoaders.get(appRef);
-    if (!data) {
-      data = {
-        loaders: /* @__PURE__ */ new Set(),
-        refs: []
-      };
-      appsWithLoaders.set(appRef, data);
-      appRef.onDestroy(() => {
-        appsWithLoaders.get(appRef)?.refs.forEach((ref) => ref.destroy());
-        appsWithLoaders.delete(appRef);
-      });
-    }
-    if (!data.loaders.has(loader)) {
-      data.loaders.add(loader);
-      data.refs.push(createComponent(loader, {
-        environmentInjector: this._environmentInjector
-      }));
-    }
-  }
-  static ɵfac = function _CdkPrivateStyleLoader_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || __CdkPrivateStyleLoader)();
-  };
-  static ɵprov = ɵɵdefineInjectable({
-    token: __CdkPrivateStyleLoader,
-    factory: __CdkPrivateStyleLoader.ɵfac,
-    providedIn: "root"
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(_CdkPrivateStyleLoader, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], null, null);
-})();
-var _VisuallyHiddenLoader = class __VisuallyHiddenLoader {
-  static ɵfac = function _VisuallyHiddenLoader_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || __VisuallyHiddenLoader)();
-  };
-  static ɵcmp = ɵɵdefineComponent({
-    type: __VisuallyHiddenLoader,
-    selectors: [["ng-component"]],
-    exportAs: ["cdkVisuallyHidden"],
-    decls: 0,
-    vars: 0,
-    template: function _VisuallyHiddenLoader_Template(rf, ctx) {
-    },
-    styles: [".cdk-visually-hidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap;outline:0;-webkit-appearance:none;-moz-appearance:none;left:0}[dir=rtl] .cdk-visually-hidden{left:auto;right:0}"],
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(_VisuallyHiddenLoader, [{
-    type: Component,
-    args: [{
-      exportAs: "cdkVisuallyHidden",
-      encapsulation: ViewEncapsulation.None,
-      template: "",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      styles: [".cdk-visually-hidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap;outline:0;-webkit-appearance:none;-moz-appearance:none;left:0}[dir=rtl] .cdk-visually-hidden{left:auto;right:0}"]
-    }]
-  }], null, null);
-})();
-
-// node_modules/@angular/cdk/fesm2022/keycodes.mjs
-var ENTER = 13;
-var SHIFT = 16;
-var CONTROL = 17;
-var ALT = 18;
-var SPACE = 32;
-var ZERO = 48;
-var NINE = 57;
-var A = 65;
-var Z = 90;
-var META = 91;
-var MAC_META = 224;
-function hasModifierKey(event, ...modifiers) {
-  if (modifiers.length) {
-    return modifiers.some((modifier) => event[modifier]);
-  }
-  return event.altKey || event.shiftKey || event.ctrlKey || event.metaKey;
-}
-
-// node_modules/@angular/cdk/fesm2022/coercion/private.mjs
-function coerceObservable(data) {
-  if (!isObservable(data)) {
-    return of(data);
-  }
-  return data;
-}
-
-// node_modules/@angular/cdk/fesm2022/coercion.mjs
-function coerceNumberProperty(value, fallbackValue = 0) {
-  if (_isNumberValue(value)) {
-    return Number(value);
-  }
-  return arguments.length === 2 ? fallbackValue : 0;
-}
-function _isNumberValue(value) {
-  return !isNaN(parseFloat(value)) && !isNaN(Number(value));
-}
-function coerceArray(value) {
-  return Array.isArray(value) ? value : [value];
-}
-function coerceElement(elementOrRef) {
-  return elementOrRef instanceof ElementRef ? elementOrRef.nativeElement : elementOrRef;
-}
+} from "./chunk-4GQNXL7P.js";
 
 // node_modules/@angular/cdk/fesm2022/observers.mjs
 function shouldIgnoreRecord(record) {
@@ -579,6 +336,33 @@ var ObserversModule = class _ObserversModule {
     }]
   }], null, null);
 })();
+
+// node_modules/@angular/cdk/fesm2022/keycodes.mjs
+var ENTER = 13;
+var SHIFT = 16;
+var CONTROL = 17;
+var ALT = 18;
+var SPACE = 32;
+var ZERO = 48;
+var NINE = 57;
+var A = 65;
+var Z = 90;
+var META = 91;
+var MAC_META = 224;
+function hasModifierKey(event, ...modifiers) {
+  if (modifiers.length) {
+    return modifiers.some((modifier) => event[modifier]);
+  }
+  return event.altKey || event.shiftKey || event.ctrlKey || event.metaKey;
+}
+
+// node_modules/@angular/cdk/fesm2022/coercion/private.mjs
+function coerceObservable(data) {
+  if (!isObservable(data)) {
+    return of(data);
+  }
+  return data;
+}
 
 // node_modules/@angular/cdk/fesm2022/layout.mjs
 var LayoutModule = class _LayoutModule {
@@ -2944,6 +2728,36 @@ var MatCommonModule = class _MatCommonModule {
     }]
   }], () => [], null);
 })();
+var _ErrorStateTracker = class {
+  _defaultMatcher;
+  ngControl;
+  _parentFormGroup;
+  _parentForm;
+  _stateChanges;
+  /** Whether the tracker is currently in an error state. */
+  errorState = false;
+  /** User-defined matcher for the error state. */
+  matcher;
+  constructor(_defaultMatcher, ngControl, _parentFormGroup, _parentForm, _stateChanges) {
+    this._defaultMatcher = _defaultMatcher;
+    this.ngControl = ngControl;
+    this._parentFormGroup = _parentFormGroup;
+    this._parentForm = _parentForm;
+    this._stateChanges = _stateChanges;
+  }
+  /** Updates the error state based on the provided error state matcher. */
+  updateErrorState() {
+    const oldState = this.errorState;
+    const parent = this._parentFormGroup || this._parentForm;
+    const matcher = this.matcher || this._defaultMatcher;
+    const control = this.ngControl ? this.ngControl.control : null;
+    const newState = matcher?.isErrorState(control, parent) ?? false;
+    if (newState !== oldState) {
+      this.errorState = newState;
+      this._stateChanges.next();
+    }
+  }
+};
 var MAT_DATE_LOCALE = new InjectionToken("MAT_DATE_LOCALE", {
   providedIn: "root",
   factory: MAT_DATE_LOCALE_FACTORY
@@ -4940,7 +4754,14 @@ var _MatInternalFormField = class __MatInternalFormField {
 })();
 
 export {
-  Platform,
-  MatCommonModule
+  ObserversModule,
+  FocusMonitor,
+  _IdGenerator,
+  MatCommonModule,
+  _ErrorStateTracker,
+  ErrorStateMatcher,
+  _StructuralStylesLoader,
+  MatRippleModule,
+  MatRippleLoader
 };
-//# sourceMappingURL=chunk-EFBLH3TG.js.map
+//# sourceMappingURL=chunk-K5W2CANY.js.map

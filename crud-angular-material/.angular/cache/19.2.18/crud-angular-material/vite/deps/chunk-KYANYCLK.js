@@ -4,7 +4,7 @@ import {
   EventManager,
   EventManagerPlugin,
   SharedStylesHost
-} from "./chunk-VW3ZDLJH.js";
+} from "./chunk-ULN5BKAK.js";
 import {
   CommonModule,
   DOCUMENT,
@@ -15,7 +15,7 @@ import {
   isPlatformServer,
   parseCookieValue,
   setRootDomAdapter
-} from "./chunk-AYVJ7RXS.js";
+} from "./chunk-256YEQI2.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   ApplicationModule,
@@ -96,7 +96,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-G3RBU73A.js";
+} from "./chunk-4GQNXL7P.js";
 
 // node_modules/@angular/platform-browser/fesm2022/browser-0WrrQdE0.mjs
 var BrowserDomAdapter = class _BrowserDomAdapter extends DomAdapter {
@@ -3701,7 +3701,6 @@ function provideClientHydration(...features) {
 var VERSION = new Version("19.2.15");
 
 export {
-  HttpClient,
   BrowserDomAdapter,
   BrowserGetTestability,
   DomEventsPlugin,
@@ -3711,6 +3710,7 @@ export {
   provideProtractorTestingSupport,
   platformBrowser,
   BrowserModule,
+  HttpClient,
   Meta,
   Title,
   enableDebugTools,
@@ -3744,4 +3744,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-R4QQPYZQ.js.map
+//# sourceMappingURL=chunk-KYANYCLK.js.map

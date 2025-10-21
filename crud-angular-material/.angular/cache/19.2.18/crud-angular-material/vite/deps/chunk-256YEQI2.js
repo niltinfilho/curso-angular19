@@ -58,7 +58,7 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-G3RBU73A.js";
+} from "./chunk-4GQNXL7P.js";
 
 // node_modules/@angular/common/fesm2022/dom_tokens-rA0ACyx7.mjs
 var DOCUMENT = new InjectionToken(ngDevMode ? "DocumentToken" : "");
@@ -4949,6 +4949,9 @@ export {
   PathLocationStrategy,
   Location,
   HashLocationStrategy,
+  NgClass,
+  NgStyle,
+  NgTemplateOutlet,
   CommonModule,
   parseCookieValue,
   PLATFORM_BROWSER_ID,
@@ -4971,4 +4974,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-AYVJ7RXS.js.map
+//# sourceMappingURL=chunk-256YEQI2.js.map
