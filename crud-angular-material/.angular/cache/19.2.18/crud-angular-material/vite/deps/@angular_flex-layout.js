@@ -1,4 +1,30 @@
 import {
+  DefaultFlexAlignDirective,
+  DefaultFlexDirective,
+  DefaultFlexOffsetDirective,
+  DefaultFlexOrderDirective,
+  DefaultLayoutAlignDirective,
+  DefaultLayoutDirective,
+  DefaultLayoutGapDirective,
+  FlexAlignDirective,
+  FlexAlignStyleBuilder,
+  FlexDirective,
+  FlexFillDirective,
+  FlexFillStyleBuilder,
+  FlexModule,
+  FlexOffsetDirective,
+  FlexOffsetStyleBuilder,
+  FlexOrderDirective,
+  FlexOrderStyleBuilder,
+  FlexStyleBuilder,
+  LayoutAlignDirective,
+  LayoutAlignStyleBuilder,
+  LayoutDirective,
+  LayoutGapDirective,
+  LayoutGapStyleBuilder,
+  LayoutStyleBuilder
+} from "./chunk-PI4LH6VL.js";
+import {
   ClassDirective,
   DefaultClassDirective,
   DefaultImgSrcDirective,
@@ -10,7 +36,7 @@ import {
   ShowHideDirective,
   ShowHideStyleBuilder,
   StyleDirective
-} from "./chunk-ZPEORVQP.js";
+} from "./chunk-3D7PIHQQ.js";
 import {
   DefaultGridAlignColumnsDirective,
   DefaultGridAlignDirective,
@@ -46,33 +72,7 @@ import {
   GridRowStyleBuilder,
   GridRowsDirective,
   GridRowsStyleBuilder
-} from "./chunk-U6LPFYKH.js";
-import {
-  DefaultFlexAlignDirective,
-  DefaultFlexDirective,
-  DefaultFlexOffsetDirective,
-  DefaultFlexOrderDirective,
-  DefaultLayoutAlignDirective,
-  DefaultLayoutDirective,
-  DefaultLayoutGapDirective,
-  FlexAlignDirective,
-  FlexAlignStyleBuilder,
-  FlexDirective,
-  FlexFillDirective,
-  FlexFillStyleBuilder,
-  FlexModule,
-  FlexOffsetDirective,
-  FlexOffsetStyleBuilder,
-  FlexOrderDirective,
-  FlexOrderStyleBuilder,
-  FlexStyleBuilder,
-  LayoutAlignDirective,
-  LayoutAlignStyleBuilder,
-  LayoutDirective,
-  LayoutGapDirective,
-  LayoutGapStyleBuilder,
-  LayoutStyleBuilder
-} from "./chunk-CSP2HQNA.js";
+} from "./chunk-KHUFWSF3.js";
 import {
   BREAKPOINT,
   BREAKPOINTS,
@@ -106,25 +106,27 @@ import {
   sortAscendingPriority,
   sortDescendingPriority,
   validateBasis
-} from "./chunk-GEZL5I5W.js";
-import "./chunk-4ZYS3GPN.js";
-import "./chunk-7AQ3RK2W.js";
-import "./chunk-KYANYCLK.js";
-import "./chunk-ULN5BKAK.js";
+} from "./chunk-QTGQRJ4G.js";
+import "./chunk-YQZPA3F5.js";
+import "./chunk-AOQTKODF.js";
+import "./chunk-Y7543LZU.js";
+import "./chunk-XXU66YKN.js";
 import {
   isPlatformServer
-} from "./chunk-256YEQI2.js";
+} from "./chunk-FZM6MPGW.js";
 import {
   Inject,
   NgModule,
   PLATFORM_ID,
   Version,
-  __spreadValues,
   setClassMetadata,
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-4GQNXL7P.js";
+} from "./chunk-ACM7XIUF.js";
+import {
+  __spreadValues
+} from "./chunk-WDMUDEB6.js";
 
 // node_modules/@angular/flex-layout/fesm2020/angular-flex-layout.mjs
 var VERSION = new Version("15.0.0-beta.42");
