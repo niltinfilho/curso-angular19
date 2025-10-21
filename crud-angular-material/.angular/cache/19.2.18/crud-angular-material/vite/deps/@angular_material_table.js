@@ -1,16 +1,16 @@
 import {
   MatCommonModule
-} from "./chunk-X7NSKTL4.js";
+} from "./chunk-YN2TGYRP.js";
 import {
   Platform,
   RtlScrollAxisType,
   getRtlScrollAxisType,
   supportsScrollBehavior
-} from "./chunk-JFHNHKF4.js";
+} from "./chunk-TFYBVGH6.js";
 import {
   BidiModule,
   Directionality
-} from "./chunk-IA7PSH4Q.js";
+} from "./chunk-PYPIILD4.js";
 import {
   _isNumberValue,
   coerceElement,
@@ -18,7 +18,7 @@ import {
 } from "./chunk-CXD4D2ML.js";
 import {
   DOCUMENT
-} from "./chunk-KS6TNKFM.js";
+} from "./chunk-KD4WO7CA.js";
 import {
   BehaviorSubject,
   ChangeDetectionStrategy,

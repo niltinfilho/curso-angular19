@@ -1,6 +1,6 @@
 import {
   DomSanitizer
-} from "./chunk-F4JKRZWG.js";
+} from "./chunk-GSDSOJX6.js";
 import {
   BaseDirective2,
   CoreModule,
@@ -9,7 +9,7 @@ import {
   SERVER_TOKEN,
   StyleBuilder,
   StyleUtils
-} from "./chunk-5S3MF6H2.js";
+} from "./chunk-EOGRYTNW.js";
 import {
   coerceBooleanProperty
 } from "./chunk-CXD4D2ML.js";
@@ -17,7 +17,7 @@ import {
   NgClass,
   NgStyle,
   isPlatformServer
-} from "./chunk-KS6TNKFM.js";
+} from "./chunk-KD4WO7CA.js";
 import {
   Directive,
   ElementRef,
@@ -818,4 +818,4 @@ export {
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-5OXPYGRD.js.map
+//# sourceMappingURL=chunk-JDJ6S7EZ.js.map
