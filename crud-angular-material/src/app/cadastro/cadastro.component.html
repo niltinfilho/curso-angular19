@@ -29,12 +29,8 @@
             <div fxLayout="column" fxFlex="350px">
               <mat-form-field class="full-width">
                 <mat-label>CPF: *</mat-label>
-                <input type="text"
-                       [(ngModel)]="cliente.cpf"
-                       name="cpf"
-                       mask="000.000.000-00"
-                       placeholder="Ex: 123.456.789-10"
-                       matInput>
+                <input type="text" [(ngModel)]="cliente.cpf" name="cpf" mask="000.000.000-00"
+                  placeholder="Ex: 123.456.789-10" matInput>
               </mat-form-field>
             </div>
           </div>
@@ -43,12 +39,21 @@
             <div fxLayout="column" fxFlex="350px">
               <mat-form-field class="full-width">
                 <mat-label>Data de nascimento: *</mat-label>
-                <input type="text"
-                       [(ngModel)]="cliente.dataNascimento"
-                       name="dataNascimento"
-                       mask="00/00/0000"
-                       placeholder="Ex: 01/01/1970"
-                       matInput>
+                <input type="text" [(ngModel)]="cliente.dataNascimento" name="dataNascimento" mask="00/00/0000"
+                  placeholder="Ex: 01/01/1970" matInput>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="16px">
+            <div fxLayout="column" fxFlex="350px">
+              <mat-form-field class="full-width">
+                <mat-label>UF: *</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let uf of estados" [value]="uf.sigla">
+                    {{uf.sigla}} - {{uf.nome}}
+                  </mat-option>
+                </mat-select>
               </mat-form-field>
             </div>
           </div>

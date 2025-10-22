@@ -7,12 +7,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from './cliente';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 import { BrasilapiService } from '../brasilapi.service';
 import { Estado, Municipio } from '../brasilapi.models';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-cadastro',
@@ -23,8 +25,10 @@ import { Estado, Municipio } from '../brasilapi.models';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatSelectModule,
     MatButtonModule,
     NgxMaskDirective,
+    CommonModule
   ],
   providers: [provideNgxMask()],
   templateUrl: './cadastro.component.html',
@@ -63,7 +67,7 @@ export class CadastroComponent implements OnInit {
 
   carregarUFs() {
     this.brasilApiService.listarUFs().subscribe({
-      next: listaEstados => console.log("Lista estados: ", listaEstados),
+      next: listaEstados => this.estados = listaEstados,
       error: erro => console.log("Ocorreu um erro: ", erro)
     })
   }

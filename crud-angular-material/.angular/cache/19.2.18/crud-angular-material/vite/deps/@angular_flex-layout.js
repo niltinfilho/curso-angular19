@@ -1,47 +1,4 @@
 import {
-  ClassDirective,
-  DefaultClassDirective,
-  DefaultImgSrcDirective,
-  DefaultShowHideDirective,
-  DefaultStyleDirective,
-  ExtendedModule,
-  ImgSrcDirective,
-  ImgSrcStyleBuilder,
-  ShowHideDirective,
-  ShowHideStyleBuilder,
-  StyleDirective
-} from "./chunk-V6H5ZYM5.js";
-import "./chunk-7G75K3U7.js";
-import "./chunk-BNZELCVW.js";
-import "./chunk-UZ57727X.js";
-import {
-  DefaultFlexAlignDirective,
-  DefaultFlexDirective,
-  DefaultFlexOffsetDirective,
-  DefaultFlexOrderDirective,
-  DefaultLayoutAlignDirective,
-  DefaultLayoutDirective,
-  DefaultLayoutGapDirective,
-  FlexAlignDirective,
-  FlexAlignStyleBuilder,
-  FlexDirective,
-  FlexFillDirective,
-  FlexFillStyleBuilder,
-  FlexModule,
-  FlexOffsetDirective,
-  FlexOffsetStyleBuilder,
-  FlexOrderDirective,
-  FlexOrderStyleBuilder,
-  FlexStyleBuilder,
-  LayoutAlignDirective,
-  LayoutAlignStyleBuilder,
-  LayoutDirective,
-  LayoutGapDirective,
-  LayoutGapStyleBuilder,
-  LayoutStyleBuilder
-} from "./chunk-NOITXI4M.js";
-import "./chunk-7PE6WZAG.js";
-import {
   DefaultGridAlignColumnsDirective,
   DefaultGridAlignDirective,
   DefaultGridAlignRowsDirective,
@@ -76,8 +33,47 @@ import {
   GridRowStyleBuilder,
   GridRowsDirective,
   GridRowsStyleBuilder
-} from "./chunk-SDVIN2WD.js";
-import "./chunk-MKM3GL3K.js";
+} from "./chunk-MBNE7MNI.js";
+import {
+  DefaultFlexAlignDirective,
+  DefaultFlexDirective,
+  DefaultFlexOffsetDirective,
+  DefaultFlexOrderDirective,
+  DefaultLayoutAlignDirective,
+  DefaultLayoutDirective,
+  DefaultLayoutGapDirective,
+  FlexAlignDirective,
+  FlexAlignStyleBuilder,
+  FlexDirective,
+  FlexFillDirective,
+  FlexFillStyleBuilder,
+  FlexModule,
+  FlexOffsetDirective,
+  FlexOffsetStyleBuilder,
+  FlexOrderDirective,
+  FlexOrderStyleBuilder,
+  FlexStyleBuilder,
+  LayoutAlignDirective,
+  LayoutAlignStyleBuilder,
+  LayoutDirective,
+  LayoutGapDirective,
+  LayoutGapStyleBuilder,
+  LayoutStyleBuilder
+} from "./chunk-JQ2RCMWL.js";
+import "./chunk-O3U7MM42.js";
+import {
+  ClassDirective,
+  DefaultClassDirective,
+  DefaultImgSrcDirective,
+  DefaultShowHideDirective,
+  DefaultStyleDirective,
+  ExtendedModule,
+  ImgSrcDirective,
+  ImgSrcStyleBuilder,
+  ShowHideDirective,
+  ShowHideStyleBuilder,
+  StyleDirective
+} from "./chunk-OP56I4BA.js";
 import {
   BREAKPOINT,
   BREAKPOINTS,
@@ -111,11 +107,15 @@ import {
   sortAscendingPriority,
   sortDescendingPriority,
   validateBasis
-} from "./chunk-V43LLPQJ.js";
-import "./chunk-543OTYF5.js";
+} from "./chunk-EBCGVF3D.js";
+import "./chunk-VVK6OEOK.js";
+import "./chunk-SOKLS63E.js";
+import "./chunk-JPC7BASW.js";
+import "./chunk-MKM3GL3K.js";
+import "./chunk-DDO6EIYX.js";
 import {
   isPlatformServer
-} from "./chunk-R6STGZCH.js";
+} from "./chunk-K7C2UX2R.js";
 import {
   Inject,
   NgModule,

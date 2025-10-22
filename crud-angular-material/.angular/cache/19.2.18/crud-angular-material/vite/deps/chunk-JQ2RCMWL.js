@@ -1,7 +1,7 @@
 import {
   BidiModule,
   Directionality
-} from "./chunk-7PE6WZAG.js";
+} from "./chunk-O3U7MM42.js";
 import {
   BaseDirective2,
   CoreModule,
@@ -15,7 +15,7 @@ import {
   isFlowHorizontal,
   multiply,
   validateBasis
-} from "./chunk-V43LLPQJ.js";
+} from "./chunk-EBCGVF3D.js";
 import {
   Directive,
   ElementRef,
@@ -1530,4 +1530,4 @@ export {
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-NOITXI4M.js.map
+//# sourceMappingURL=chunk-JQ2RCMWL.js.map
