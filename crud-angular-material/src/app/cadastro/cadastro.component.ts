@@ -7,7 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatSelectModule } from '@angular/material/select';
+import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from './cliente';
@@ -54,10 +54,13 @@ export class CadastroComponent implements OnInit {
       const id = params['id'];
       if (id) {
         let clienteEncontrado = this.service.buscarClientePorId(id);
-
         if (clienteEncontrado) {
           this.atualizando = true;
-          this.cliente = this.service.buscarClientePorId(id) || Cliente.newCliente();
+          this.cliente = clienteEncontrado;
+          if (this.cliente.uf) {
+            const event = {value: this.cliente.uf};
+            this.carregarMunicipios(event as MatSelectChange);
+          }
         }
       }
     })
@@ -68,6 +71,14 @@ export class CadastroComponent implements OnInit {
   carregarUFs() {
     this.brasilApiService.listarUFs().subscribe({
       next: listaEstados => this.estados = listaEstados,
+      error: erro => console.log("Ocorreu um erro: ", erro)
+    })
+  }
+
+  carregarMunicipios(event: MatSelectChange) {
+    const ufSelecionada = event.value;
+    this.brasilApiService.listarMunicipios(ufSelecionada).subscribe({
+      next: listaMunicipios => this.municipios = listaMunicipios,
       error: erro => console.log("Ocorreu um erro: ", erro)
     })
   }
