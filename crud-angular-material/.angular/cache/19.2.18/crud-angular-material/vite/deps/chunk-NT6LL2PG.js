@@ -2,6 +2,9 @@ import {
   DomSanitizer
 } from "./chunk-GSDSOJX6.js";
 import {
+  coerceBooleanProperty
+} from "./chunk-CXD4D2ML.js";
+import {
   BaseDirective2,
   CoreModule,
   LAYOUT_CONFIG,
@@ -10,9 +13,6 @@ import {
   StyleBuilder,
   StyleUtils
 } from "./chunk-EOGRYTNW.js";
-import {
-  coerceBooleanProperty
-} from "./chunk-CXD4D2ML.js";
 import {
   NgClass,
   NgStyle,
@@ -818,4 +818,4 @@ export {
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-JDJ6S7EZ.js.map
+//# sourceMappingURL=chunk-NT6LL2PG.js.map

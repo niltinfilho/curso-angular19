@@ -1,4 +1,8 @@
 import {
+  BidiModule,
+  Directionality
+} from "./chunk-PYPIILD4.js";
+import {
   BaseDirective2,
   CoreModule,
   LAYOUT_CONFIG,
@@ -12,10 +16,6 @@ import {
   multiply,
   validateBasis
 } from "./chunk-EOGRYTNW.js";
-import {
-  BidiModule,
-  Directionality
-} from "./chunk-PYPIILD4.js";
 import {
   Directive,
   ElementRef,
@@ -1530,4 +1530,4 @@ export {
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-IHPR5SQX.js.map
+//# sourceMappingURL=chunk-AJHM2SSZ.js.map

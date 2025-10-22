@@ -1,13 +1,13 @@
 import {
+  coerceBooleanProperty
+} from "./chunk-CXD4D2ML.js";
+import {
   BaseDirective2,
   CoreModule,
   MediaMarshaller,
   StyleBuilder,
   StyleUtils
 } from "./chunk-EOGRYTNW.js";
-import {
-  coerceBooleanProperty
-} from "./chunk-CXD4D2ML.js";
 import {
   Directive,
   ElementRef,
@@ -1616,4 +1616,4 @@ export {
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-FGOXI2RV.js.map
+//# sourceMappingURL=chunk-XR5KF4WW.js.map
