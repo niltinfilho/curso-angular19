@@ -72,7 +72,7 @@ export class CadastroComponent implements OnInit {
     this.brasilApiService.listarUFs().subscribe({
       next: listaEstados => this.estados = listaEstados,
       error: erro => console.log("Ocorreu um erro: ", erro)
-    })
+    });
   }
 
   carregarMunicipios(event: MatSelectChange) {
@@ -80,18 +80,18 @@ export class CadastroComponent implements OnInit {
     this.brasilApiService.listarMunicipios(ufSelecionada).subscribe({
       next: listaMunicipios => this.municipios = listaMunicipios,
       error: erro => console.log("Ocorreu um erro: ", erro)
-    })
+    });
   }
 
   salvar() {
     if (!this.atualizando) {
       this.service.salvar(this.cliente);
       this.cliente = Cliente.newCliente();
-      this.mostrarMensagem('Salvo com sucesso!')
+      this.mostrarMensagem('Salvo com sucesso!');
     } else {
       this.service.atualizar(this.cliente);
-      this.router.navigate(['/consulta'])
-      this.mostrarMensagem('Atualizado com sucesso!')
+      this.router.navigate(['/consulta']);
+      this.mostrarMensagem('Atualizado com sucesso!');
     }
   }
 
