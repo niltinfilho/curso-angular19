@@ -4,9 +4,9 @@
   <form id="categoriaForm" [formGroup]="camposForm" (ngSubmit)="salvar()">
     <div class="mb-4">
       <label class="block text-gray-600 font-medium mb-2">Nome</label>
-      <input type="text" name="nome" id="nome" placeholder="Ex: Restaurantes, Praias, Shopping"
-        formControlName="nome" class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-blue-400" required>
-      <span class="text-red-500 text-sm">
+      <input type="text" name="nome" id="nome" placeholder="Ex: Restaurantes, Praias, Shopping" formControlName="nome"
+        class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-blue-400" required>
+      <span class="text-red-500 text-sm" *ngIf="isCampoInvalido('nome')">
         Campo obrigatório
       </span>
     </div>
@@ -14,15 +14,15 @@
     <div class="mb-4">
       <label class="block text-gray-600 font-medium mb-2">Descrição</label>
       <textarea rows="4" id="descricao" name="descricao" placeholder="Ex: Restaurantes, Praias, Shopping"
-        formControlName="descricao" class="w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring-blue-400" required>
+        formControlName="descricao"
+        class="w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring-blue-400" required>
         </textarea>
-      <span class="text-red-500 text-sm">
+      <span class="text-red-500 text-sm" *ngIf="isCampoInvalido('descricao')">
         Campo obrigatório
       </span>
     </div>
 
-    <button type="submit"
-      class="w-full bg-blue-600 text-white font-semibold p-3 rounded shadow-sm hover:bg-blue-700">
+    <button type="submit" class="w-full bg-blue-600 text-white font-semibold p-3 rounded shadow-sm hover:bg-blue-700">
       Cadastrar Categoria
     </button>
   </form>

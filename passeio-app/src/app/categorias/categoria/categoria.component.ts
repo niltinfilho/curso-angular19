@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-categoria',
@@ -18,7 +18,17 @@ export class CategoriaComponent {
   }
 
   salvar() {
-    console.log('Valores digitados: ', this.camposForm.value);
-    console.log('Esta valido: ', this.camposForm.valid);
+    this.camposForm.markAllAsTouched();
+
+    if (this.camposForm.valid) {
+      console.log('Valores digitados: ', this.camposForm.value);
+      console.log('Esta valido: ', this.camposForm.valid);
+    }
+
+  }
+
+  isCampoInvalido(nomeCampo: string): boolean {
+    const campo = this.camposForm.get(nomeCampo);
+    return campo?.invalid && campo?.touched && campo?.errors?.['required'];
   }
 }
