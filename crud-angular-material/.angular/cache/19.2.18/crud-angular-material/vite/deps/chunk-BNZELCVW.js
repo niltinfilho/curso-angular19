@@ -1,8 +1,10 @@
 import {
+  getDOM
+} from "./chunk-543OTYF5.js";
+import {
   DOCUMENT,
-  getDOM,
   isPlatformServer
-} from "./chunk-MRRZASLP.js";
+} from "./chunk-R6STGZCH.js";
 import {
   APP_ID,
   CSP_NONCE,
@@ -752,4 +754,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-J76CE2I3.js.map
+//# sourceMappingURL=chunk-BNZELCVW.js.map

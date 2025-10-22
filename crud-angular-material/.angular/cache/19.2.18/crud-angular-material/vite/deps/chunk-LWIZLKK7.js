@@ -3,18 +3,18 @@ import {
   RtlScrollAxisType,
   getRtlScrollAxisType,
   supportsScrollBehavior
-} from "./chunk-SN3OSLHD.js";
+} from "./chunk-EAY6MJIJ.js";
 import {
   BidiModule,
   Directionality
-} from "./chunk-C4LLTVSA.js";
+} from "./chunk-7PE6WZAG.js";
 import {
   coerceElement,
   coerceNumberProperty
 } from "./chunk-MKM3GL3K.js";
 import {
   DOCUMENT
-} from "./chunk-MRRZASLP.js";
+} from "./chunk-R6STGZCH.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -1758,4 +1758,4 @@ export {
   ViewportRuler,
   ScrollingModule
 };
-//# sourceMappingURL=chunk-PGYDMT7Q.js.map
+//# sourceMappingURL=chunk-LWIZLKK7.js.map
