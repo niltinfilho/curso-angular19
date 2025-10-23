@@ -1,9 +1,25 @@
 {
   "categorias": [
     {
-      "id": "1",
-      "nome": "Restaurantes",
-      "descricao": "Lugares para alimentação"
+      "0": {
+        "id": "2",
+        "nome": "Shoppings",
+        "descricao": "Lugares para fazer compras e passear"
+      },
+      "id": "be03"
+    },
+    {
+      "nome": "Shoppings Atualizado",
+      "descricao": "Lugares para fazer compras e passear",
+      "id": "588b"
+    },
+    {
+      "0": {
+        "id": "",
+        "nome": "Teste",
+        "descricao": "Lugares para blablabla"
+      },
+      "id": "4939"
     }
   ]
 }
