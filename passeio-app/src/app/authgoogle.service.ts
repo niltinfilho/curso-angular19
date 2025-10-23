@@ -23,7 +23,7 @@ export class AuthgoogleService {
       if(this.oauthService.hasValidIdToken()) {
         this.profile.set(this.oauthService.getIdentityClaims());
       }
-    })
+    });
   }
 
   login() {
@@ -35,5 +35,9 @@ export class AuthgoogleService {
     this.oauthService.logOut();
     this.profile.set(null);
     this.router.navigate(['']);
+  }
+
+  getLoggedProfile() {
+    return this.profile();
   }
 }
