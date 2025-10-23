@@ -1,25 +1,19 @@
 {
   "categorias": [
     {
-      "0": {
-        "id": "2",
-        "nome": "Shoppings",
-        "descricao": "Lugares para fazer compras e passear"
-      },
-      "id": "be03"
+      "id": "cbf0",
+      "nome": "maria",
+      "descricao": "asdasd"
     },
     {
-      "nome": "Shoppings Atualizado",
-      "descricao": "Lugares para fazer compras e passear",
-      "id": "588b"
+      "id": "7d73",
+      "nome": "Praias",
+      "descricao": "Lugares para tomar banho com a familia\n"
     },
     {
-      "0": {
-        "id": "",
-        "nome": "Teste",
-        "descricao": "Lugares para blablabla"
-      },
-      "id": "4939"
+      "id": "aa0c",
+      "nome": "Restaurantes",
+      "descricao": "123123123"
     }
   ]
 }
