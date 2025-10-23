@@ -2,8 +2,42 @@
   <h2 class="text2x1 font-semibold text-gray-700 mg-4">Novo Lugar</h2>
   <hr>
 
-  <form id="lugarForm">
+  <form id="lugarForm" [formGroup]="camposForm" (ngSubmit)="salvar()">
+    <div class="mb-4">
+      <label for="nome" class="block text-gray-600 font-medium mb-2">Nome</label>
+      <input type="text" name="nome" id="nome" placeholder="Ex: Praia do Sol, Restaurante Estrela" formControlName="nome"
+        class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-blue-400" required>
+      <!-- <span class="text-red-500 text-sm" *ngIf="isCampoInvalido('nome')">
+        Campo obrigatório
+      </span> -->
+    </div>
 
+    <div class="mb-4">
+      <label for="nome" class="block text-gray-600 font-medium mb-2">Categoria</label>
+    </div>
+
+    <div class="mb-4">
+      <label for="localizacao" class="block text-gray-600 font-medium mb-2">Localização</label>
+      <input type="text" name="localizacao" id="localizacao" placeholder="Ex: São Paulo, Urãnia" formControlName="localizacao"
+        class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-blue-400" required>
+      <!-- <span class="text-red-500 text-sm" *ngIf="isCampoInvalido('nome')">
+            Campo obrigatório
+          </span> -->
+    </div>
+
+    <div class="mb-4">
+      <label for="urlFoto" class="block text-gray-600 font-medium mb-2">Imagem do Lugar</label>
+      <input type="text" name="urlFoto" id="urlFoto" placeholder="Ex: http://exemplo.com/foto.jpg"
+        formControlName="urlFoto" class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-blue-400"
+        required>
+      <!-- <span class="text-red-500 text-sm" *ngIf="isCampoInvalido('nome')">
+                Campo obrigatório
+              </span> -->
+    </div>
+
+    <div class="mb-4">
+      <label for="urlFoto" class="block text-gray-600 font-medium mb-2">Avaliação</label>
+    </div>
   </form>
 
   <button type="submit" class="w-full bg-blue-600 text-white font-semibold p-3 rounded shadow-sm hover:bg-blue-700">
