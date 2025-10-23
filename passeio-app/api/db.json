@@ -15,5 +15,23 @@
       "nome": "Restaurantes",
       "descricao": "123123123"
     }
+  ],
+  "lugares": [
+    {
+      "id": "f967",
+      "nome": "Bar do zé",
+      "categoria": "Restaurantes",
+      "localizacao": "Rio de janeiro",
+      "urlFoto": "123123.com/123.png",
+      "avaliacao": "5"
+    },
+    {
+      "id": "1f1b",
+      "nome": "",
+      "categoria": "",
+      "localizacao": "",
+      "urlFoto": "",
+      "avaliacao": "0"
+    }
   ]
 }
