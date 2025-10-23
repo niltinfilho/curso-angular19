@@ -24,4 +24,8 @@ export class GaleriaComponent implements OnInit {
     this.categoriaService.obterTodas().subscribe(categorias => this.categoriasFiltro = categorias);
     this.lugarService.obterTodas().subscribe(lugares => this.lugares = lugares);
   }
+
+  getTotalEstrelas(lugar: Lugar) : string {
+    return '&#9733;'.repeat(lugar.avaliacao || 0) + '&#9734;'.repeat(5 - (lugar.avaliacao || 0));
+  }
 }
