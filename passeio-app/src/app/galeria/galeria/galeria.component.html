@@ -6,7 +6,7 @@
 
         <select name="categoriaFiltro" [(ngModel)]="categoriaFiltro"
         class="w-full border border-gray-300 p-2 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400">
-        <option [value]="">Todas as categorias</option>
+        <option [value]="-1">Todas as categorias</option>
         <option *ngFor="let categoria of categoriasFiltro" [value]="categoria.nome">{{categoria.nome}}</option>
       </select>
 
