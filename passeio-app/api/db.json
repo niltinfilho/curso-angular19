@@ -1,11 +1,6 @@
 {
   "categorias": [
     {
-      "id": "cbf0",
-      "nome": "maria",
-      "descricao": "asdasd"
-    },
-    {
       "id": "7d73",
       "nome": "Praias",
       "descricao": "Lugares para tomar banho com a familia\n"
@@ -14,24 +9,29 @@
       "id": "aa0c",
       "nome": "Restaurantes",
       "descricao": "123123123"
+    },
+    {
+      "id": "f708",
+      "nome": "Parques",
+      "descricao": "Campos e brinquedos para ir com a familia"
     }
   ],
   "lugares": [
     {
-      "id": "f967",
-      "nome": "Bar do zé",
-      "categoria": "Restaurantes",
-      "localizacao": "Rio de janeiro",
-      "urlFoto": "123123.com/123.png",
+      "id": "bb33",
+      "nome": "Praia do Espelho",
+      "categoria": "Praias",
+      "localizacao": "Bahia",
+      "urlFoto": "https://conhecimentocientifico.r7.com/wp-content/uploads/2020/09/praias-o-que-sao-caracteristicas-e-importancia-para-o-meio-ambiente-5.jpg",
       "avaliacao": "5"
     },
     {
-      "id": "1f1b",
-      "nome": "",
-      "categoria": "",
-      "localizacao": "",
-      "urlFoto": "",
-      "avaliacao": "0"
+      "id": "f250",
+      "nome": "Parque Ibirapuera",
+      "categoria": "Parques",
+      "localizacao": "São Paulo",
+      "urlFoto": "https://grupospimovel.s3.amazonaws.com/Imagens/Noticias/Sistema/mercado-imobiliario/Parque_Ibirapuera.jpg",
+      "avaliacao": "3"
     }
   ]
 }
